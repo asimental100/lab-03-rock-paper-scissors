@@ -15,6 +15,8 @@ const resetCounter = document.getElementById('reset-counter');
 
 const playButton = document.getElementById('play-button');
 const resetButton = document.getElementById('reset-button');
+const checkedInput = document.querySelector('input:checked');
+const userGuess = checkedInput.value;
 // initialize state
 let gamesWon = 0;
 let gamesLost = 0;
@@ -29,26 +31,24 @@ resetCounter.textContent = numOfResets;
 // set event listeners to update state and DOM
 
 playButton.addEventListener('click', () => {
-    const checkedInput = document.querySelector('input:checked');
-    const userGuess = checkedInput.value;
     console.log(userGuess);
 
     let computerNumber = Math.ceil(Math.random() * 3);
     console.log(computerNumber);
-    let computerSelection = "";
+    let computerSelection = '';
 
     if (computerNumber === 1) {
-        computerSelection = "rock";
+        computerSelection = 'rock';
         console.log(computerSelection);
     }
 
     if (computerNumber === 2) {
-        computerSelection = "paper";
+        computerSelection = 'paper';
         console.log(computerSelection);
     }
 
     if (computerNumber === 3) {
-        computerSelection = "scissors";
+        computerSelection = 'scissors';
         console.log(computerSelection);
     }
 
@@ -113,7 +113,7 @@ playButton.addEventListener('click', () => {
     winCounter.textContent = gamesWon;
 
     resetButton.style.display = 'inline';
-})
+});
 
 resetButton.addEventListener('click', () => {
     resetButton.style.display = 'none';
@@ -134,4 +134,4 @@ resetButton.addEventListener('click', () => {
     resetCounter.textContent = numOfResets;
 
     console.clear();
-})
+});
