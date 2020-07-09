@@ -1,0 +1,40 @@
+body {
+    --color1: hsla(202, 87%, 33%, 1);
+    --color2: hsla(213, 7%, 53%, 1);
+    --color3: hsla(100, 6%, 64%, 1);
+    --color4: hsla(353, 29%, 73%, 1);
+    --color5: hsla(358, 67%, 30%, 1);
+    
+    font-family: 'Titillium Web', sans-serif;
+
+    display: block;
+    text-align: center;
+}
+
+#body {
+    background-color: var(--color1);
+}
+
+span {
+    margin: auto;
+}
+
+#reset-span {
+    display: none;
+}
+
+#reset-button {
+    display: none;
+}
+
+#win-result-span {
+    display: none;
+}
+
+#lose-result-span {
+    display: none;
+}
+
+#draw-result-span {
+    display: none;
+}
